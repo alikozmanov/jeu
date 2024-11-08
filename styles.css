@@ -23,6 +23,9 @@
 .bg-black{
     background-color: #333;
 }
+.c-red{
+    color: red;
+}
 .text-shadow{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -54,7 +57,7 @@
     margin-top: 40px;
     display: flex;
     justify-content: space-around;
-    height: 100vh;
+    min-height: 100vh;
 }
 html,
 body {
@@ -291,16 +294,84 @@ button {
     border-radius: 20px 50px;
     background-color: #eee;
     padding: 10px 20px;
+    border: 2px solid black;
+    width: 400px;
+    min-height: 400px; 
+    margin-right: auto;
+    margin-left: auto;
 }
-
+#subject{
+    height:200px;
+}
+#count{
+    background-color: gold;padding: 0 20px;
+}
 #game img{
     display: none;
+}
+#game{
+    padding-top: 20px;
 }
 
 .image-gallery{
     width: 100%;
 }
+#r1-1{
+    width: 138px;background-color: red; color: white;
+}
+#r1-3{
+    background-color: orange; color: white;
+}
+.bg-orange{
+    background-color: orange;
+}
+.bg-green{
+    background-color: green;
+}
+.g-10{
+    gap: 10px;
+}
 
-
+/* Responsive design */
+@media (max-width: 1100px) {
+  
+    .navbar a {
+        margin: 0 10px;
+    }
+ 
+    .header {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        padding: 20px 5%;
+        position: unset;
+    }
+    .div{
+        margin: 20px auto;
+    }
+    .row,#home,#money{
+        display: block;
+    }
+    #p1{
+        max-width: 100vw;
+    }
+   
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+   
+    .navbar a {
+        margin: 10px 0;
+    }
+    .col{
+        width: 100%;
+    }
+    #game img{
+        height: 100vw;
+    }
+}
 
 
