@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles.css">
+  <title>BIENVENU DANS NOTRE JEU D'IMAGE VOYAGE CACHEE, CALCULER ET VOYAGER</title>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo"><span>TeamBAM FMS</span></a>
+    <nav class="navbar">
+      <a href="#home" class="active">Calculatrice</a>
+      <a href="#money">Devise Monnaie</a>
+      <a href="#game">Jeu</a>
+      <a href="#contact-form">Contact</a>
+    </nav>
+  </header>
+  
+  <strong><h1 class="mt-100 mx-auto d-flex j-center bg-black text-shadow radius box-shadow c-white w-fit-content px-20 py-10">Calculer et voyager par altitude</h1></strong>
+  <div id="home">
+
+    <div>
+      <h1 class="d-flex j-center">Historique</h1>
+      <p id="p1" style="border: 2px solid black;width: 400px;height: 400px; margin-right: auto; margin-left: auto;">
+      </p>
+    </div>
+    <div>
+      <div class="div">
+        <p id="output" class="display">0</p>
+
+        <div class="first-row">
+          <button id="r1-1" onclick="forclear()" style="width: 138px;background-color: red; color: white;"> C </button>
+          <button id="r1-3" onclick="perc()" style="background-color: orange; color: white;"> % </button>
+          <button id="r1-4" onclick="fordisplay('/')" style="background-color: orange; color: white;">/</button>
+        </div>
+
+        <div class="second-row">
+          <button id="r2-1" onclick="fordisplay('7')">7</button>
+          <button id="r2-2" onclick="fordisplay('8')">8</button>
+          <button id="r2-3" onclick="fordisplay('9')">9</button>
+          <button id="r2-4" onclick="fordisplay('*')" style="background-color: orange; color: white;">x</button>
+        </div>
+
+        <div class="third-row">
+          <button id="r3-1" onclick="fordisplay('4')">4</button>
+          <button id="r3-2" onclick="fordisplay('5')">5</button>
+          <button id="r3-3" onclick="fordisplay('6')">6</button>
+          <button id="r3-4" onclick="fordisplay('-')" style="background-color: orange; color: white;">-</button>
+        </div>
+
+        <div class="fourth-row">
+          <button id="r4-1" onclick="fordisplay('1')">1</button>
+          <button id="r4-2" onclick="fordisplay('2')">2</button>
+          <button id="r4-3" onclick="fordisplay('3')">3</button>
+          <button id="r4-4" onclick="fordisplay('+')" style="background-color: orange; color: white;">+</button>
+        </div>
+
+        <div class="fifth-row">
+          <button id="r5-1" onclick="fordisplay('0')">0</button>
+          <button id="r5-2" onclick="fordisplay('.')">.</button>
+          <button id="r5-3"  onclick="solve()" style="background-color: green;color: white;">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h1 style="display: flex;justify-content: center;gap: 10px;">Nombre d'essaie :<span style="color: red;background-color: gold;padding: 0 20px;" id="count"></span></h1>
+    <!-- Ajout de la div avec 5 cartes -->
+    <div id="game" class="image-gallery" style="display: flex; justify-content: center; gap: 10px; padding-top: 20px;">
+      <img src="assets/img/d1.jpeg" alt="Image 1" style="height: auto;">
+      <img src="assets/img/d2.jpeg" alt="Image 2" style="height: auto;">
+      <img src="assets/img/d3.jpeg" alt="Image 3" style="height: auto;">
+      <img src="assets/img/d4.jpeg" alt="Image 4" style="height: auto;">
+      <img src="assets/img/d5.jpeg" alt="Image 5" style="height: auto;">
+      <img src="assets/img/d6.jpeg" alt="Image 6" style="height: auto;">
+      <img src="assets/img/d7.jpeg" alt="Image 7" style="height: auto;">
+      <img src="assets/img/d8.jpeg" alt="Image 8" style="height: auto;">
+      <img src="assets/img/d9.jpeg" alt="Image 9" style="height: auto;">
+      <img src="assets/img/d10.jpeg" alt="Image 10" style="height: auto;">
+      <img src="assets/img/d11.jpeg" alt="Image 11" style="height: auto;">
+    </div>
+
+  <div id="money" class="container1">
+    <h1>Changer vos devises pour voyager en altitude</h1>
+    <div class="row">
+      <div class="col">
+        <select name="" id="" class="Currency">
+          <option>Select</option>
+        </select>
+        <input type="number" id="input_currency" name="">
+      </div>
+      <div class="col">
+        <select name="" id="" class="Currency">
+          <option>Select</option>
+        </select>
+        <input type="number" id="output_currency" disabled name="">
+      </div>
+    </div>
+    <button onclick="converter()">Convert</button>
+
+  </div>
+  <footer id="contact-form">
+    <div class="container">
+      <form action="action_page">
+        <label for="fname">Prénom</label>
+        <input type="text" id="fname" name="firstname" placeholder="Votre prénom..">
+
+        <label for="lname">Nom</label>
+        <input type="text" id="lname" name="lastname" placeholder="Votre nom de famille..">
+
+        <label for="country">Pays</label>
+        <select id="country" name="country">
+          <option value="france">France</option>
+          <option value="usa">États-Unis</option>
+          <option value="canada">Canada</option>
+        </select>
+
+        <label for="subject">Message</label>
+        <textarea id="subject" name="subject" placeholder="Écrivez votre message.." style="height:200px"></textarea>
+
+        <input type="submit" value="Envoyer">
+      </form>
+    </div>
+
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
